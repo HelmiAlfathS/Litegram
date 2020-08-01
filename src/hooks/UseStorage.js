@@ -33,12 +33,12 @@ function useStorage(file) {
       },
 
       //arg 4
+      // Grab Url from storage
+      // create timestamp from timestamp() that we import from firebase config
+      // Create collection
       async () => {
-        // Grab Url from storage
-        // create timestamp from timestamp() that we import from firebase config
         const url = await storageRef.getDownloadURL();
         const createdAt = timestamp();
-
         collectionRef.add({ url, createdAt });
         setUrl(url);
       }
