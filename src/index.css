@@ -47,11 +47,13 @@ label {
   border: 1px solid var(--primary);
   border-radius: 50%;
   margin: 10px auto;
-  line-height: 30px;
+  line-height: 25px;
   color: var(--primary);
   font-weight: bold;
   font-size: 24px;
+  text-align: center;
 }
+
 label:hover {
   background: var(--primary);
   color: white;

@@ -10,7 +10,7 @@ function UploadForm() {
     let target = e.target.files[0];
     let types = ['image/png', 'image/jpeg'];
 
-    // Validation. includes is method to check value is in array
+    // Validation. includes is a method to check value is in array
     if (target && types.includes(target.type)) {
       console.log(target);
       setFile(target);
@@ -21,10 +21,11 @@ function UploadForm() {
   };
   return (
     <div>
-      <form action="#">
+      <label>
+        <span>+</span>
         <input type="file" onChange={handleChange} />
-      </form>
-      <div className="output">
+      </label>
+      <div className="Output">
         {error && <div className="error">{error}</div>}
         {file && <div className=""> {file.name}</div>}
       </div>
